@@ -19,12 +19,11 @@ function App() {
     setMessage(e.target.value)
   }
 
-  function handleClick(){
+  async function handleClick(){
     console.log('ola');
     
     if(nome == '' || email ==''){
-      console.log('nao deu certo');
-      
+      console.log('nao deu certo');   
     }
     else{
 
@@ -51,7 +50,7 @@ function App() {
   return (
     <div className=' text-2xl h-screen w-screen bg-gray-700 flex items-center justify-center text-white'>
       <div className='h-5/6 w-1/2'>
-        <div className='h-full w-full  flex items-center justify-center'>
+        <div className='h-full w-full flex-col flex items-center justify-center'>
         <form className='h-full w-full text-center flex flex-col justify-center' >
             <h1 className='m-4 text-5xl'>Contato</h1>
             <p className='m-4' >Digite seu nome</p>
@@ -75,9 +74,10 @@ function App() {
               name="" 
               className='text-black m-4 text-center h-12 ' />
 
-            <button className='rounded-full  m-4' onClick={handleClick} >CONFIRMAR</button>
             
           </form>
+
+          <button className='rounded-full  m-4' onClick={handleClick} >CONFIRMAR</button>
           </div> 
           <div></div>   
       </div>
